@@ -20,7 +20,7 @@ def clock(user_name, user_password):
         current_time[3] + current_time[4]
     dial_imager(dial_time)
     post_interface(user_name, user_password)
-    sleep(300)
+    tick_admin()
 
 
 def dial_imager(time):
@@ -63,7 +63,7 @@ def shut_down(user_name, user_password):
     sys.exit()
 
 
-def tick_starter():
+def tick_admin():
     # Start Timing Adjustment
     while True:
         current_tick = str(datetime.now().time())
@@ -77,7 +77,7 @@ def tick_starter():
 try:
     user_name = input("USER NAME: ")
     user_password = input("PASSWORD: ")
-    tick_starter()
+    tick_admin()
     while True:
         clock(user_name, user_password)
 except KeyboardInterrupt:
