@@ -40,6 +40,7 @@ def dial_developer(text, name, size_x, size_y, coord_x, coord_y):
 
 
 def post_interface(user_name, user_password):
+    # Refreshing posts by del and add
     my_bot = bot_instantiate(user_name, user_password)
     medias = my_bot.get_total_user_medias(my_bot.user_id)
     my_bot.delete_medias(medias)
@@ -64,7 +65,7 @@ def shut_down(user_name, user_password):
 
 
 def tick_admin():
-    # Start Timing Adjustment
+    # Implementing Refresh Rate
     while True:
         current_tick = str(datetime.now().time())
         current_seconds = current_tick[6] + current_tick[7]
