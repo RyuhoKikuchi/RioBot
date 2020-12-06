@@ -1,5 +1,5 @@
 # RioBot
-Experimental Instabot by Rio
+Experimental InstaBot by Rio
 
 ## Warning!
 Some script will delete all photos in your Instagram account.
