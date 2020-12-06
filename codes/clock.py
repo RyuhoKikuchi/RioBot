@@ -1,4 +1,5 @@
 from datetime import datetime
+from getpass import getpass
 from instabot import Bot
 from os import system
 from PIL import Image, ImageDraw
@@ -77,7 +78,7 @@ def tick_admin():
 
 try:
     user_name = input("USER NAME: ")
-    user_password = input("PASSWORD: ")
+    user_password = getpass("PASSWORD: ")
     tick_admin()
     while True:
         clock(user_name, user_password)
