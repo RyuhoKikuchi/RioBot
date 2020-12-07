@@ -9,7 +9,7 @@ import sys
 
 
 def bot_instantiate(user_name, user_password):
-    # Initiate
+    # Initialize
     bot = Bot()
     bot.login(username=user_name, password=user_password)
     return bot
@@ -53,7 +53,7 @@ def post_interface(user_name, user_password):
 
 
 def shut_down(user_name, user_password, font_type):
-    # Shut Down Process
+    # Shut Down Procedure
     for i in range(3):
         system(f"rm {i}.jpg.REMOVE_ME")
     my_bot = bot_instantiate(user_name, user_password)
