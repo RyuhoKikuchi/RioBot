@@ -17,12 +17,12 @@ def bot_instantiate(user_name, user_password):
 
 def cycles(user_name, user_password, font_type):
     # Ticking Main Process
+    timer()
     current_time = str(datetime.now(pytz.timezone('Asia/Tokyo')).time())
     dial_time = current_time[0] + current_time[1],\
         current_time[3] + current_time[4]
     dial_imager(dial_time, font_type)
     post_interface(user_name, user_password)
-    tick_admin()
 
 
 def dial_imager(time, font_type):
@@ -65,7 +65,7 @@ def shut_down(user_name, user_password, font_type):
     sys.exit()
 
 
-def tick_admin():
+def timer():
     # Implementing Refresh Rate
     while True:
         current_tick = str(datetime.now(pytz.timezone('Asia/Tokyo')).time())
@@ -80,7 +80,6 @@ try:
     USER_NAME = input("USER NAME: ")
     USER_PASSWORD = getpass("PASSWORD: ")
     FONT_TYPE = "DearSunshine.otf"
-    tick_admin()
     while True:
         cycles(USER_NAME, USER_PASSWORD, FONT_TYPE)
 except KeyboardInterrupt:
