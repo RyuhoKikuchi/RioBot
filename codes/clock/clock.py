@@ -70,8 +70,8 @@ def timer():
     while True:
         current_tick = str(datetime.now(pytz.timezone('Asia/Tokyo')).time())
         current_seconds = current_tick[6] + current_tick[7]
-        current_minutes = current_tick[4]
-        if ((current_minutes == '0') and (current_seconds == '00')) or ((current_minutes == '5') and (current_seconds == '00')):
+        current_minutes = current_tick[3] + current_tick[4]
+        if ((current_minutes == '00') and (current_seconds == '00')) or ((current_minutes == '30') and (current_seconds == '00')):
             break
         sleep(1)
 
