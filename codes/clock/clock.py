@@ -39,7 +39,7 @@ def dial_developer(text, name, size_x, size_y, coord_x, coord_y, font_type, font
     inking = ImageDraw.Draw(new_dial)
     fnt = ImageFont.truetype(font_type, font_size)
     inking.text((coord_x, coord_y), text, font=fnt)
-    new_dial.save(str(name) + ".jpg")
+    new_dial.save(f"{name}.jpg")
 
 
 def post_interface(user_name, user_password):
