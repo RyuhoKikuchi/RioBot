@@ -111,6 +111,7 @@ def terminator():
     mask_night = Image.new("L", night.size, 0)
     draw = ImageDraw.Draw(mask_night)
     draw.polygon(terminator, fill=255)
+    mask_night = mask_night.filter(ImageFilter.GaussianBlur(73.4))
     day_night.paste(night, (0, 0), mask_night)
     day_night.rotate(-90, expand=True)
     # day_night.save("day_night.png", quality=95)
